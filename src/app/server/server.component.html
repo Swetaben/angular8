@@ -1,0 +1,20 @@
+<p>
+  This is Server with ServerId {{ serverId }} and status is
+  {{ serverStatus }} totalmethod is {{ getMethod2() }}
+</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label>UserName</label>
+      <input type="text" class="form-control" [(ngModel)]="username" />
+      <p>{{ username }}</p>
+    </div>
+    <button
+      class="btn btn-primary"
+      [disabled]="username === ''"
+      (click)="resetName()"
+    >
+      Reset Name
+    </button>
+  </div>
+</div>
